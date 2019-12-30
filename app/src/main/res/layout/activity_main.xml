@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:background="#ffffff"
+              android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/testParent"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:background="#000000"
+            tools:context=".MainActivity">
+
+        <com.athou.testdemo.TestLayout
+                android:id="@+id/layout1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:background="@color/test1"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toTopOf="@id/layout3"
+                app:layout_constraintRight_toLeftOf="@id/layout2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.athou.testdemo.TestLayout
+                android:id="@+id/layout2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="@color/test2"
+                app:layout_constraintLeft_toRightOf="@id/layout1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/layout4"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.athou.testdemo.TestLayout
+                android:id="@+id/layout3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="@color/test3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/layout4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout1"/>
+
+        <com.athou.testdemo.TestLayout
+                android:id="@+id/layout4"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/test4"
+                android:layout_margin="5dp"
+                android:minHeight="100dp"
+                app:layout_constraintLeft_toRightOf="@id/layout3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
